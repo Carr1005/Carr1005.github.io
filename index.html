@@ -13,7 +13,7 @@
 				cardw : 145,	//page card's width .
 				cardh : 217,
 				cardn : 5,		//the number of visible page card .
-				margin : 9,		//margin between cards .
+				margin : 18,		//margin between cards .
 				JSON :result
 			};
 			$('#movie').FBSB(setting);
@@ -22,13 +22,20 @@
 		$.getJSON("JSON/data.js",function (result){
 			var setting = {
 				subject:'NBA',
-				cardw : 145,	//page card's width .
-				cardh : 145,
-				cardn : 7,		//the number of visible page card .
-				margin : 9,		//margin between cards .
 				JSON :result
 			};
 			$('#nba').FBSB(setting);
+		});
+		$.getJSON("JSON/data.js",function (result){
+			var setting = {
+				subject:'Movie',
+				cardw : 145,	//page card's width .
+				cardh : 217,
+				cardn : 3,		//the number of visible page card .
+				margin : 15,		//margin between cards .
+				JSON :result
+			};
+			$('#movie1').FBSB(setting);
 		});
 	});
 	</script>
@@ -36,6 +43,24 @@
 </head>
 	
 <body>
+	<pre class='codeblock'>
+  
+    $('#nba').FBSB({
+      subject : 'NBA',
+      JSON : result
+    });
+
+  // If you don't specify the initial 
+  // setting ,we have default
+
+  {	
+      cardw : 145,
+      cardh : 145,
+      cardn : 7,
+      margin : 9
+  };
+	</pre>
+
 	<div class ='box' id="nba">
 		<h3></h3>
 		<div class='tri'></div>
@@ -56,7 +81,51 @@
 			</div>
 		</div>
 	</div>
+	<pre class='codeblock'>
+
+   $('#movie').FBSB({
+      subject : 'Movie',
+      cardw : 145,
+      cardh : 217,
+      cardn : 5,    // adjust
+      margin : 18,  // adjust
+      JSON : result
+    });
+	</pre>
+
 	<div class ='box' id="movie">
+		<h3></h3>
+		<div class='tri'></div>
+		<div class ='slide-wrap'>
+			<div class='border'>
+				<div class='slide'>
+					<div class='shift right'></div>
+					<i class='shift right'></i>
+					<div class='shift left'></div>
+					<i class ='shift left'></i>
+					<ul>
+						<li>
+						</li>
+						<li>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<pre class='codeblock'>
+
+   $('#movie1').FBSB({
+      subject : 'Movie',
+      cardw : 145,
+      cardh : 217,
+      cardn : 3, // at least three
+      margin : 15,  
+      JSON : result
+    });
+	</pre>
+
+	<div class ='box' id="movie1">
 		<h3></h3>
 		<div class='tri'></div>
 		<div class ='slide-wrap'>

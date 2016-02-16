@@ -181,3 +181,16 @@ span
 {
 	color: #89919c;
 }
+.codeblock
+{
+	font-family: Consolas;
+	font-size: 14px;
+	margin-top:50px;
+	position: relative;
+	left:50%;
+	transform:translateX(-50%); 
+	background-color: #f7f7f7;
+	width: 355px;
+	color:#333;
+	border-radius: 3px; 
+}
